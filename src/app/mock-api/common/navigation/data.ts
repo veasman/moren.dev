@@ -8,6 +8,13 @@ export const defaultNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:home',
         link : '/home'
+    },
+    {
+        id   : 'contact-me',
+        title: 'Contact me',
+        type : 'basic',
+        icon : 'heroicons_outline:at-symbol',
+        link : '/contact-me'
     }
 ];
 export const compactNavigation: FuseNavigationItem[] = [
@@ -17,6 +24,13 @@ export const compactNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:home',
         link : '/home'
+    },
+    {
+        id   : 'contact-me',
+        title: 'Contact me',
+        type : 'basic',
+        icon : 'heroicons_outline:at-symbol',
+        link : '/contact-me'
     }
 ];
 export const futuristicNavigation: FuseNavigationItem[] = [
@@ -26,6 +40,13 @@ export const futuristicNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:home',
         link : '/home'
+    },
+    {
+        id   : 'contact-me',
+        title: 'Contact me',
+        type : 'basic',
+        icon : 'heroicons_outline:at-symbol',
+        link : '/contact-me'
     }
 ];
 export const horizontalNavigation: FuseNavigationItem[] = [
@@ -35,5 +56,12 @@ export const horizontalNavigation: FuseNavigationItem[] = [
         type : 'basic',
         icon : 'heroicons_outline:home',
         link : '/home'
+    },
+    {
+        id   : 'contact-me',
+        title: 'Contact me',
+        type : 'basic',
+        icon : 'heroicons_outline:at-symbol',
+        link : '/contact-me'
     }
 ];
