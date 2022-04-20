@@ -1,0 +1,11 @@
+<!-- Button -->
+<button
+  mat-icon-button
+  (click)="changeScheme()">
+    <mat-icon
+        *ngIf="!usingDarkMode()"
+        [svgIcon]="'heroicons_outline:moon'"></mat-icon>
+    <mat-icon
+        *ngIf="usingDarkMode()"
+        [svgIcon]="'heroicons_solid:moon'"></mat-icon>
+</button>

@@ -17,6 +17,7 @@ import { ShortcutsModule } from 'app/layout/common/shortcuts/shortcuts.module';
 import { UserModule } from 'app/layout/common/user/user.module';
 import { SharedModule } from 'app/shared/shared.module';
 import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/modern.component';
+import { SchemeToggleModule } from 'app/layout/common/scheme-toggle/scheme-toggle.module';
 
 @NgModule({
     declarations: [
@@ -37,6 +38,7 @@ import { ModernLayoutComponent } from 'app/layout/layouts/horizontal/modern/mode
         NotificationsModule,
         QuickChatModule,
         SearchModule,
+        SchemeToggleModule,
         ShortcutsModule,
         UserModule,
         SharedModule
