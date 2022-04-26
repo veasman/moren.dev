@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild, ViewEncapsulation } from '@angular/core';
 import { FormBuilder, FormGroup, NgForm, Validators } from '@angular/forms';
 import { FuseAlertType } from '@fuse/components/alert';
+import { ApiRequestService } from 'app/core/auth/api-request/api-request.service';
 
 @Component({
     selector: 'app-contact-me',
@@ -19,6 +20,7 @@ export class ContactMeComponent implements OnInit {
     showAlert: boolean = false;
 
     constructor(
+        private _apiRequestService: ApiRequestService,
         private _formBuilder: FormBuilder) {
     }
 
@@ -33,8 +35,28 @@ export class ContactMeComponent implements OnInit {
 
     // TODO: Create SpringBoot backend to send emails
     contactSend(): void {
-        console.log('NOTE: Backend not yet implemented to send emails. charlie@moren.tech if you would like to get in contact.');
-        console.log(this.contactForm);
+        if (this.contactForm.invalid) { return };
+
+        this.contactForm.disable();
+        this.showAlert = false;
+
+        this._apiRequestService.post('contact', this.contactForm)
+            .subscribe(
+                () => {
+
+                },
+                (response) => {
+                    this.contactForm.enable();
+                    this.contactNgForm.resetForm();
+
+                    this.alert = {
+                        type   : 'error',
+                        message: 'Error sending request | NOTE: Backend not yet implemented',
+                    };
+
+                    this.showAlert = true;
+                }
+            )
     }
 
 }
